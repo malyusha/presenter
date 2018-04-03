@@ -1,14 +1,11 @@
 <?php
 
-
 namespace Malyusha\Presenter;
-
 
 use Malyusha\Presenter\Exceptions\PresenterException;
 
 /**
  * Trait PresentableTrait
- * @package App\Support\Presenters
  *
  * @property string $presenter
  */
@@ -29,14 +26,15 @@ trait PresentableTrait
      */
     public function present()
     {
-        if (!property_exists($this, 'presenter') || !class_exists($this->presenter)) {
+        if (! property_exists($this, 'presenter') || ! class_exists($this->presenter)) {
             throw new PresenterException('$presenter property is required when using PresentableTrait.');
         }
 
-        if (!$this->presenterInstance) {
+        if (! $this->presenterInstance) {
             $this->presenterInstance = new $this->presenter($this);
         }
 
         return $this->presenterInstance;
     }
+
 }

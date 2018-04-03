@@ -4,8 +4,6 @@ namespace Malyusha\Presenter;
 
 /**
  * Class CachesAttributes
- *
- * @package App\Support\Presenters
  */
 trait CachesAttributes
 {
@@ -22,10 +20,11 @@ trait CachesAttributes
      */
     protected function cached($attribute, $value)
     {
-        if (!array_key_exists($attribute, $this->cachedPresenterAttributes)) {
+        if (! array_key_exists($attribute, $this->cachedPresenterAttributes)) {
             $this->cachedPresenterAttributes[$attribute] = $value;
         }
 
         return $this->cachedPresenterAttributes[$attribute];
     }
+
 }
