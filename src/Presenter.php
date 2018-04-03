@@ -8,7 +8,6 @@ abstract class Presenter
 
     /**
      * @var mixed
-     *
      */
     protected $entity;
 
@@ -24,11 +23,11 @@ abstract class Presenter
 
     public function __call($name, $arguments)
     {
-        return $this->cached('method_' . $name, $this->entity->{$name}(...$arguments));
+        return $this->cached('method_'.$name, $this->entity->{$name}(...$arguments));
     }
 
     public function __get($name)
     {
-        return $this->cached('property_' . $name, $this->entity->{$name});
+        return $this->cached('property_'.$name, $this->entity->{$name});
     }
 }

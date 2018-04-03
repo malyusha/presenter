@@ -26,5 +26,4 @@ trait CachesAttributes
 
         return $this->cachedPresenterAttributes[$attribute];
     }
-
 }

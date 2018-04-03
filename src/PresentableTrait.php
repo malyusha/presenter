@@ -36,5 +36,4 @@ trait PresentableTrait
 
         return $this->presenterInstance;
     }
-
 }
