@@ -1,0 +1,22 @@
+{
+  "name": "malyusha/presenter",
+  "description": "Presenters - objects wrapper for displaying data",
+  "keywords": [
+    "model-presenter",
+    "presenter",
+    "present objects"
+  ],
+  "license": "MIT",
+  "type": "library",
+  "require": {
+    "php": "^5.4 || ^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Malyusha\\Presenter\\": "src/"
+    }
+  }
+}
